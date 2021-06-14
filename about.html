@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>ヒエダの自己紹介tp_simple16</title>
+<title>おすすめの本紹介</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="ここにサイト説明を入れます">
 <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-opening.css">
 <script src="js/fixmenu_pagetop.js"></script>
 <script src="js/openclose.js"></script>
 <!--[if lt IE 9]>
@@ -16,13 +17,15 @@
 <![endif]-->
 </head>
 
-<body class="home">
+<body>
 
 <div id="container">
 
 <header>
 
-<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="Welcome"></a></h1>
+
+
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="ヒエダの自己紹介ページ"></a></h1>
 
 <!--PC用（801px以上端末）メニュー-->
 <nav id="menubar">
@@ -34,38 +37,71 @@
 </ul>
 </nav>
 
-
 </header>
 
 <div id="contents">
 
-<aside class="inner first"><img src="images/mainimg.jpg" alt=""></aside>
+<section class="inner first">
 
+<h2>おすすめの本紹介</h2>
+<p><span class="color1">気分に合わせておすすめの本を紹介します</span><br>
+<p>どんな本を読みたいですか？</p>
+    <table>
+        <tr><th>NO.</th><th>気分</th></tr>
+        <tr><td>1</td><td>どきどき</td></tr>
+        <tr><td>2</td><td>もやもや</td></tr>　
+        <tr><td>3</td><td>わくわく</td></tr>
+        <tr><td>4</td><td>うっとり</td></tr>
+        <tr><td>5</td><td>しんみり</td></tr>　　       
+    </table> <br>
+</p>
+  <script>
+function CheckData() {
+    if (document.getElementById("number").value == "") {
+    alert('数字を入力して下さい（半角）');
+    return false;
+    }
+    else {
+    n = document.getElementById("number").value;
+    if (n == 1) {
 
-<section class="inner">
+        document.getElementById("result").value = 'オスカー・ワイルド『サロメ』';
+    
+    }
+    else if(n == 2){
+        document.getElementById("result").value = 'エドワード・ゴーリー『弦のないハープ』';
+    }
 
-<h2>ヒエダの自己紹介ページへ<br>ようこそ！</h2>
+   else if(n == 3){
+        document.getElementById("result").value = '『新明解国語辞典』';
+    }
+    else if(n == 3){
+        document.getElementById("result").value = '高村幸太郎『智恵子抄』';
+    }
+    else{ document.getElementById("result").value = '親鸞『教行信証』';
 
-<h3>まずは音楽の話から…</h3>
-<p>小学4年生から高校までトロンボーンを演奏していました。</p>
+    } 
+    return true;
+    }
+}
+</script>
+</head>
 
-<p>大学からは心機一転、三味線を始めました。1，2年生のころは<a href="https://www.kirakuza.net/kirakuzajinbutsu">津軽三味線クラブ</a>に所属し、民謡や演歌を学びました。</p>
-<p>大学の3年生からは軽音楽サークルに入り、キーボードを弾いていました。</p>
-
-<h3>それから趣味の本の話…</h3>
-<p>本を読むのが好きで、休みの日は読書をしています。哲学書、小説、絵本、詩集などなど。いろんなジャンルの本を読み漁っています。</p>
-
-<h3>おすすめの本は</h3>
-<p><a href="about.html">こちらから</a></p>
+<body>
+    <h1>あなたへのおすすめは？</h1>
+    数字を入力して下さい（半角）<input type="text" id="number">
+<button type="button" onclick="CheckData()">CHECK！</button>
+<div>結果は…<input type="text" id="result" style="width:400px;">がおすすめです！</div>
+</body>
 
 </section>
-
 <div style="width: 500px; height: auto; display: block; margin: auto;">
 <a href = "about3.html"><img src="images/sinran.jpg"alt=""></a>
 </div>
 
+
 <footer>
-<small>Copyright&copy; <a href="index.html">Welcome!</a> All Rights Reserved.</small>
+<small>Copyright&copy; <a href="index.html">ヒエダの自己紹介ページ</a> All Rights Reserved.</small>
 <span class="pr">《<a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
 </footer>
 
